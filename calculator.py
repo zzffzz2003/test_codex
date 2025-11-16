@@ -1,15 +1,26 @@
-# 一个写得比较随意的计算模块，后面可以让 Codex 来重构
+"""Basic arithmetic operations module."""
 
 def add(a, b):
+    """Return the sum of a and b."""
     return a + b
 
+
 def sub(a, b):
-    # 故意不写注释，将来让 Codex 补
+    """Return the result of subtracting b from a."""
     return a - b
 
+
 def mul(a, b):
+    """Return the product of a and b."""
     return a * b
 
+
 def div(a, b):
-    # 这里没有处理除以 0 的情况，后面可以让 Codex 来修复
+    """Return the result of dividing a by b.
+
+    Raises:
+        ValueError: If the divisor b is zero.
+    """
+    if b == 0:
+        raise ValueError("Division by zero is not allowed.")
     return a / b
